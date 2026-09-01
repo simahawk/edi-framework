@@ -12,6 +12,14 @@ class EDIWebserviceSend(Component):
 
     Configuration is expected to come from the work ctx key `webservice`.
     You can easily pass via exchange type advanced settings.
+
+    DEPRECATED: kept only for backward compatibility with existing
+    `component`-based setups (including any custom `_inherit` of this
+    component). New exchange types should use the `edi.webservice.send`
+    model handler instead (see `models/edi_webservice_send.py`), selected
+    via `send_model_id`, which also supports `webservice.endpoint` - a
+    feature deliberately NOT available here, to nudge migration to the new
+    handler rather than extending this one further.
     """
 
     _name = "edi.webservice.send"

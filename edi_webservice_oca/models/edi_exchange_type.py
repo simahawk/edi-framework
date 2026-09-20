@@ -28,6 +28,8 @@ class EDIExchangeType(models.Model):
         "alter the encoding of the file being sent.",
     )
 
+    # TODO: this should look for inheritance on edi.webservice.send
+    # or a specific ir.model param because peopel can extend the model.
     @api.depends("send_model_id")
     def _compute_webservice_send_enabled(self):
         handler = self.env.ref(

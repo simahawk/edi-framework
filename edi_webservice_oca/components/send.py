@@ -7,6 +7,8 @@ from odoo import _, exceptions
 from odoo.addons.component.core import Component
 
 
+# TODO: move it to edi_webservice_component_oca
+# and install it in a post-upgrade script.
 class EDIWebserviceSend(Component):
     """Generic component for webservice requests.
 
